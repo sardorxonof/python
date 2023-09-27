@@ -1,17 +1,17 @@
-# # import math
-# # import random
-# # ceil = input("rondom number ceil !")
-# # floor = input("rondom number floor !")
-# # rounds = input("rondom number rounds !")
-# # ------------------------------------------------------------------------------------------------------
-# # print(math.ceil(float(ceil)),  end=" в большую сторону " )
-# # print(math.floor(float(floor)), end=" в меньшую сторону ") 
-# # print(round(float(rounds)), end=" в ровную сторону ") 
-# # ------------------------------------------------------------------------------------------------------
-# # print(random.randrange(1,10))
-# # print(random.randint(1,10))
-# # print(round(random.random() * 10))
-# # ------------------------------------------------------------------------------------------------------
+#?# import math
+#?# import random
+#?# ceil = input("rondom number ceil !")
+#?# floor = input("rondom number floor !")
+#?# rounds = input("rondom number rounds !")
+#?# ------------------------------------------------------------------------------------------------------
+#?# print(math.ceil(float(ceil)),  end=" в большую сторону " )
+#?# print(math.floor(float(floor)), end=" в меньшую сторону ") 
+#?# print(round(float(rounds)), end=" в ровную сторону ") 
+#?# ------------------------------------------------------------------------------------------------------
+#?# print(random.randrange(1,10))
+#?# print(random.randint(1,10))
+#?# print(round(random.random() * 10))
+#?# ------------------------------------------------------------------------------------------------------
 
 # # input("rondom two numbers")
 # # one_number = int(input("one number"))
@@ -46,78 +46,6 @@
 # ?    case _:
 # ?        print("error lorem" )
 
-Alisher, [26.09.2023 17:32]
-# INPUT   =>   is identical to prompt() in JS
-# RU:  идентичен prompt() в JS
-# -----------------------------------
-# GETTING STRING PARTS (==> '---'.slice())
-# '...'[start:end:step] [начало:конец:шаг]
-# 'Hello'[0:2]    # He
-# 'Hello'[0:5:2]  # Hlo
-# 'Hello'[::2]    # Hlo
-# 'Hello'[::-1]   # olleH
-
-# -----------------------------------
-# INCLUDES
-# print(" " in "Hello world")
-# "..." in "..."  => checks if the other string is
-#                    included in the string
-
-# -----------------------------------
-# REPLACE
-# .replace('...', '...')  (==> .replaceAll())
-# print("Hello world".replace('o', "*"))
-
-import re  # Regular Expressions
-
-# x = "I love an Apple but sometimes I eat an orange or BANANA"
-# y = ["apple", "orange", "banana"]  # "apple|orange|banana"
-# # [..., ..., ...].join("|")  is in JS
-# y = "|".join(y)
-# --------------------------------------
-# print("BEFORE:  => ", x)
-# x = re.sub(
-#     "|".join(y),
-#     "***",
-#     x,
-#     flags=re.IGNORECASE
-# )
-# print("AFTER:  => ", x)
-# --------------------------------------
-# re.sub(
-#     #   '...'   or    r'[^a-z]'   or    '...|...|...',
-#     #   replacement,
-#     #   original_string
-#     #   flags=re.IGNORECASE
-# )
-# EXAMPLES:
-# text = "Mentioning of reD, GrEen and BLUE is prohibited"
-# words_to_replace = ["red", "green", "blue"]
-# new_text = re.sub(f'{"|".join(words_to_replace)}',
-#                 "***",
-#                 text,
-#                 flags=re.IGNORECASE)
-# print(new_text)
-# ----------------------------------------------------------------------------------
-# MODIFYING STRINGS
-
-
-# capitalize()      Converts the first character to upper case
-#               RU: преобразует первый символ в верхний регистр
-# print("hello world".capitalize())  # Hello world
-# ===================================
-# title()          Converts the first character of each word to upper case
-#               RU: преобразует первый символ каждого слова в верхний регистр
-# print("hello world".title())  # Hello World
-# ===================================
-# istitle()          Returns True if the string follows the rules of a title
-#               RU: Возвращает True, если строка соответствует правилам заголовка
-# print("Hello World".istitle())  # False
-# ===================================
-# upper()          Converts a string into upper case
-#               RU: преобразует строку в верхний регистр
-# print("hello world".upper())  # HELLO WORLD
-# ===================================
 # lower()          Converts a string into lower case
 #               RU: преобразует строку в нижний регистр
 # print("HELLO WORLD".lower())  # hello world
@@ -147,7 +75,6 @@ import re  # Regular Expressions
 #               RU: Возвращает количество раз, когда в строке встречается указанное значение
 # print("Test text for checking the count() method".count("t"))  # 6
 
-Alisher, [26.09.2023 17:32]
 
 # print("Test text for checking the count() method".count("text"))  # 1
 # ===================================
@@ -219,7 +146,6 @@ Alisher, [26.09.2023 17:32]
 # ==             RU: Возвращает True, если все символы в строке являются цифрами
 # isnumeric()      Returns True if all characters in the string are numeric
 
-Alisher, [26.09.2023 17:32]
 
 #               RU: Возвращает True, если все символы в строке являются числовыми
 # x = "123"
@@ -294,15 +220,14 @@ Alisher, [26.09.2023 17:32]
 # 'Hello'[::-1]    Reverses a string
 #              RU: Переворачивает строку
 
-Alisher, [26.09.2023 18:02]
 
 # # 9. Write a Python program to get a string made of the first 2 and last 2 characters of a given string.
 # # If the string length is less than 2, return the empty string instead.
 # # RU: Напишите программу на Python, чтобы получить строку,
 # # состоящую из первых 2 и последних 2 символов заданной строки.
 # # Если длина строки меньше 2, вместо этого верните пустую строку.
-def first_last_two(string):  # первые_2_последние_2
-    return string[:2] + string[-2:]
+# def first_last_two(string):  # первые_2_последние_2
+#     return string[:2] + string[-2:]
 
 
 # # 10. Write a Python program to get a string from a given string where all occurrences of its first char
@@ -311,18 +236,16 @@ def first_last_two(string):  # первые_2_последние_2
 # # где все вхождения ее первого символа были заменены на '$',
 # # кроме самого первого символа.
 
-# # INPUT:   =>  "This is test text"
-# # OUTPUT:  =>  "This is $es$ $ex$"
-# # изменить_первый_символ
-def change_first_char(str, symbol="$"):
-    first = str[0]
-    str = str.lower()
-    str = str.replace(first.lower(), symbol)
-    return first + str[1:]
-print(change_first_char("Hello hhhh hello"))
+#? # INPUT:   =>  "This is test text"
+#? # OUTPUT:  =>  "This is $es$ $ex$"
+#? # изменить_первый_символ
+#? def change_first_char(str, symbol="$"):
+#?     first = str[0]
+#?     str = str.lower()
+#?     str = str.replace(first.lower(), symbol)
+#?     return first + str[1:]
+#? print(change_first_char("Hello hhhh hello"))
 
-Alisher, [26.09.2023 18:02]
-ДЗ
 
 
 # def swap_first_two(string1, string2):  # поменять_первые_два
@@ -365,8 +288,6 @@ Alisher, [26.09.2023 18:02]
 
 
 # def concat_strings(string1, string2):  # объединить_строки
-
-Alisher, [26.09.2023 18:02]
 
 
 # # 20. Write a Python function to convert a given string to all uppercase if it contains
@@ -423,7 +344,6 @@ Alisher, [26.09.2023 18:02]
 # # characters as input. The function should return the value of each character as a hexadecimal string.
 # # You have to separate each byte by a space and return all alpha hexadecimal characters as lowercase.
 
-Alisher, [26.09.2023 18:02]
 
 
 # def convert_to_hex(string):
