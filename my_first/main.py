@@ -389,6 +389,6 @@
 def stard(arg):
     print("*" * arg)
     if arg > 1:
-        return stard(arg - 1)
+        return stard(arg - 2)
     
 print(stard(10))
