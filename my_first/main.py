@@ -391,4 +391,4 @@ def stard(arg):
     if arg > 1:
         return stard(arg - 1)
     
-print(stard(10000000000))
+print(stard(10))
