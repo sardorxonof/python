@@ -146,3 +146,28 @@
 
 
 # def repeat_half_n_times(sentence, n):
+
+# ? !  ----------------------------------------------------------------------------------------------------------------------
+
+# x = []
+
+# def test(arg: int) -> None:
+#     arg =+ 2 
+#     x.append(arg)
+    
+# def test3(arg: int , arg2: int) -> int:
+#     return arg + arg2
+ 
+# def stard(arg):
+#     print("*" * arg)
+#     if arg > 1:
+#         return stard(arg - 2)
+    
+# print(stard(10))
+def factarial(arg):
+    print(arg)
+    if arg == 1:
+        return 1 
+    else:
+        print()
+factarial(10)
