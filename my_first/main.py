@@ -1,285 +1,57 @@
-#?# import math
-#?# import random
-#?# ceil = input("rondom number ceil !")
-#?# floor = input("rondom number floor !")
-#?# rounds = input("rondom number rounds !")
-#?# ------------------------------------------------------------------------------------------------------
-#?# print(math.ceil(float(ceil)),  end=" в большую сторону " )
-#?# print(math.floor(float(floor)), end=" в меньшую сторону ") 
-#?# print(round(float(rounds)), end=" в ровную сторону ") 
-#?# ------------------------------------------------------------------------------------------------------
-#?# print(random.randrange(1,10))
-#?# print(random.randint(1,10))
-#?# print(round(random.random() * 10))
-#?# ------------------------------------------------------------------------------------------------------
+# def string1(string1) :
+#     if len(string1) > 3 and str(string1).endswith("ing") :
+#         print(string1 + "ly")
+#     elif len(string1) > 3:
+#         print(string1 + "ing")
+#     else:
+#         print(string1 + "erore")
+# print(string1(str(input("text"))))
+# ? -----------------------------------------------------------------------------------------------------------
+# def replace_not_poor(string):
+#     print(str(string).replace("не плохо","хорошо "))
+# print(replace_not_poor(str(input("lorem"))))
+# ? -----------------------------------------------------------------------------------------------------------
+# def add_tags(tag, string):
+#     match tag:
+#         case "button":
+#             print(f"<{tag}>{string}<{tag}/>")
+#         case "input":
+#             print(f"<{tag}type'{string}'{tag}/>")
+#         case "h1":
+#             print(f"<{tag}>{string}<{tag}/>")
+#         case "p":
+#             print(f"<{tag}>{string}<{tag}/>")
+#         case "div":
+#             print(f"<{tag}>{string}<{tag}/>")
+#         case _:
+#             return "error"
+# print(add_tags(str(input("tag")),str(input("string"))))
+# ? -----------------------------------------------------------------------------------------------------------
+# def have(strong,number) :
+#     text = str(strong).center(int(number) , " ")
+#     print(text)
+# print(have(str(input("text")), int(input())))
+# ? -----------------------------------------------------------------------------------------------------------
+# def insert_string_middle(string_to_insert, lenth): 
+#     lenthe = len(string_to_insert) + int(lenth)
+#     string_to_insert = str(string_to_insert)
+#     lenthss = string_to_insert[-2::]
+#     lenthss = string_to_insert.ljust(lenthe,f"{lenthss}")
+#     print(lenthss)
+# print(insert_string_middle(str(input("lorem")),input(int())))
+# ? -----------------------------------------------------------------------------------------------------------
+# def first_half_even(string):
+#     if(len(string) % 3 == 0):
+#        lens =  len(string) / 2 
+#        lsnss = string[0:int(lens):]
+#        lsnss2 = string[int(lens)::]
+#        objects = print(lsnss + lsnss + lsnss + lsnss2)
+#        print(objects)
+#     else:
+#         print("len > 2 string")
+# print(first_half_even(str(input("text"))))
+# ? -----------------------------------------------------------------------------------------------------------
 
-# # input("rondom two numbers")
-# # one_number = int(input("one number"))
-# # two_numbre = int(input("two number"))
-
-# # numbers = random.randrange(one_number,two_numbre)
-# # if numbers == 9: 
-# #     print("first won" , numbers , end="!!!" , sep="_" )
-# # elif numbers == 5:
-# #     print("second won" , numbers , end="!!!" , sep="_" )
-# # else :
-# #     print("you not won")
-
-# # print(numbers = random.randrange(one_number,two_numbre))
-
-# # lorem = input("lorem")
-
-# # # print(len(lorem))
-# # sardor = ["sardor",'help']
-# # match sardor:
-# #     case ["sardor",("sardor" | "help" | "rodras")]:
-# #         print("""lorem is lorem """)
-# #     case _:
-# #?         print("""lorem is not lorem """)
-
-# ! lorem = int(input())
-# ! match lorem:
-# !    case lorem if lorem == 10:
-# !        print("lorem is lorem ")
-# ?    case lorem if lorem == 1:
-# ?       print(1+2)
-# ?    case _:
-# ?        print("error lorem" )
-
-# lower()          Converts a string into lower case
-#               RU: преобразует строку в нижний регистр
-# print("HELLO WORLD".lower())  # hello world
-# ===================================
-# casefold()      Converts string into lower case
-#               RU: преобразует строку в нижний регистр
-# print('Hello WORLD'.casefold())  # hello world
-# The main difference is casefold() is stronger than lower() method,
-# it converts more characters into lower case
-# RU: Основное отличие в том, что метод casefold() сильнее, чем метод lower(),
-# он преобразует больше символов в нижний регистр
-# ===================================
-# isupper()          Returns True if all characters in the string are upper case
-#               RU: Возвращает True, если все символы в строке в верхнем регистре
-# print("HELLO WORLD".isupper())  # True
-# ===================================
-# islower()          Returns True if all characters in the string are lower case
-#               RU: Возвращает True, если все символы в строке в нижнем регистре
-# print("HELLO WORLD".islower())  # False
-# ===================================
-# center()          Returns a centered string
-#               RU: Возвращает центрированную строку
-# print("Testing center".center(30, "*"))  # False
-# ********Testing center********
-# ===================================
-# count()          Returns the number of times a specified value occurs in a string
-#               RU: Возвращает количество раз, когда в строке встречается указанное значение
-# print("Test text for checking the count() method".count("t"))  # 6
-
-
-# print("Test text for checking the count() method".count("text"))  # 1
-# ===================================
-# endswith()      Returns true if the string ends with the specified value
-#               RU: Возвращает true, если строка заканчивается указанным значением
-# print("Test text".endswith("text"))  # True
-# print("Test text".endswith("www"))   # False
-# ===================================
-# startswith()      Returns true if the string starts with the specified value
-#               RU: Возвращает true, если строка начинается с указанного значения
-# print("Test text".startswith("Test"))  # True
-# print("Test text".startswith("www"))   # False
-# ===================================
-# expandtabs()      Sets the tab size of the string  (EX:  "H\te\tl\tl\to" ==>  "H    e    l    l    o")
-#               RU: Устанавливает размер табуляции строки
-# test_text = "H\tello w\torl\td"
-# print(test_text.expandtabs(1))  # H ello w orl d
-# print(test_text.expandtabs(5))  # H    ello w     orl  d
-# ===================================
-# find()          Searches the string for a specified value and returns the position of where it was found (==> .indexOf())
-#               RU: Ищет строку для указанного значения и возвращает позицию, где оно было найдено
-# test_text = "This is test text for checking the find() method"
-# print(test_text.find("test"))  # 8
-# print(test_text.find("www"))   # -1
-# ===================================
-# rfind()          Searches the string for a specified value and returns the last position of where it was found  (==> .lastIndexOf()
-#               RU: Ищет строку для указанного значения и возвращает последнюю позицию, где оно было найдено
-# test_text = "This is test text for checking test the find() method"
-# print(test_text.rfind("test"))  # 31
-# print(test_text.rfind("www"))  # -1
-# ===================================
-# index()          Searches the string for a specified value and returns the position of where it was found (==> .indexOf())
-#               RU: Ищет строку для указанного значения и возвращает позицию, где оно было найдено
-# test_text = "This is test text for checking test the find() method"
-# print(test_text.index("www"))  # raises ValueError
-# ===================================
-# rindex()          Searches the string for a specified value and returns the
-#                   last position of where it was found (==> lastIndexOf in JS)
-#               RU: Ищет строку для указанного значения и возвращает последнюю позицию, где оно было найдено
-# ===================================
-# swapcase()      Swaps cases, lower case becomes upper case and vice versa
-#               RU: Меняет регистр, нижний регистр становится верхним и наоборот
-# test_text = "HeLLo world"
-# print(test_text.swapcase())  # hEllO WORLD
-# ===================================
-# format()          Formats specified values in a string
-#               RU: Форматирует указанные значения в строке
-# x = "Updated"
-# z1 = "Test text for {var} checking .format()".format(var=x)
-# z2 = f"Test text for {x} checking .format()"
-# print(z1)
-# print(z2)
-# ===================================
-# isalnum()          Returns True if all characters in the string are alphanumeric
-#               RU: Возвращает True, если все символы в строке являются буквенно-цифровыми
-# x = "Hello777"
-# print(x.isalnum())  # True
-# ===================================
-# isalpha()       Returns True if all characters in the string are in the alphabet
-#               RU: Возвращает True, если все символы в строке находятся в алфавите
-# x = "Hello"
-# print(x.isalpha()) # True
-# x = 777
-# print(x.isalpha()) # False
-# ===================================
-# isdecimal()      Returns True if all characters in the string are decimals
-# ==             RU: Возвращает True, если все символы в строке являются десятичными
-# isdigit()       Returns True if all characters in the string are digits
-# ==             RU: Возвращает True, если все символы в строке являются цифрами
-# isnumeric()      Returns True if all characters in the string are numeric
-
-
-#               RU: Возвращает True, если все символы в строке являются числовыми
-# x = "123"
-# print(x.isnumeric())  # True
-# print(x.isdigit())    # True
-# print(x.isdecimal())  # True
-# ===================================
-# isspace()          Returns True if all characters in the string are whitespaces
-#               RU: Возвращает True, если все символы в строке являются пробелами
-# x = "   "
-# print(x.isspace())  # True
-# ===================================
-# join()          Joins the elements of an iterable to the end of the string
-#               RU: Объединяет элементы итерируемого объекта в конец строки
-# x = ["Text 1", "Text 2", "Text 3"]
-# print("|".join(x))  # Text 1|Text 2|Text 3
-# print("".join(x))   # Text 1Text 2Text 3
-# print(" ".join(x))   # Text 1 Text 2 Text 3
-# ===================================
-# ljust()          Returns a left justified version of the string  (==> padStart in JS)
-#               RU: Возвращает левую версию строки
-# rjust()          Returns a right justified version of the string (==> padEnd in JS)
-#               RU: Возвращает правую версию строки
-# test_txt = "Hello"
-# print(test_txt.ljust(20, "*"))
-# print(test_txt.rjust(20, "*"))
-# ===================================
-# strip()          Returns a trimmed version of the string         (==> trim in JS)
-#              RU: Возвращает усеченную версию строки
-# x = "   Hello world   "
-# print(x.strip())  # "Hello world"
-# ===================================
-# replace()          Returns a string where a specified value is replaced with a specified value
-#              RU: Возвращает строку, в которой указанное значение заменяется на указанное значение
-# ===================================
-# split()          Splits the string at the specified separator, and returns a list
-#              RU: Разделяет строку по указанному разделителю и возвращает список
-# x = "Text 1, Text 2, Text 3"
-# print(x.split(","))  # ['Text 1', ' Text 2', ' Text 3']
-
-# If we want to split by letters, we can use list()
-# x = list(x)
-# print(x)
-# ===================================
-# rsplit(maxsplit)Splits the string at the specified separator, and returns a list
-#              RU: Разделяет строку по указанному разделителю и возвращает список
-# x = "Text 1, Text 2, Text 3"
-# x = x.rsplit(" ")
-# print(x)
-# print(x) # ["Text 1, Text 2", " Text 3"]
-
-# x.rsplit(" ", 2)  => ['Text 1, Text 2,', 'Text', '3']
-# x.rsplit(" ")  => ['Text', '1,', 'Text', '2,', 'Text', '3']
-# ===================================
-# list()           For splitting string-letters into list
-#              RU: Для разделения букв строки на списке
-#   EX: list('Hello') ==> ['H', 'e', 'l', 'l', 'o']
-# x = "Text 1, Text 2, Text 3"
-# print(list(x))
-# ===================================
-# splitlines()     Splits the string at line breaks and returns a list
-#              RU: Разделяет строку по переводам строк и возвращает список
-# x = "This is \n test \n text"
-# print(x)
-# print(x.splitlines())
-# ===================================
-# zfill()          Fills the string with a specified number of 0 values at the beginning
-#              RU: Заполняет строку указанным количеством значений 0 в начале
-# x = "Hello"
-# print(x.zfill(10))  # 00000Hello
-# ===================================
-# 'Hello'[::-1]    Reverses a string
-#              RU: Переворачивает строку
-
-
-# # 9. Write a Python program to get a string made of the first 2 and last 2 characters of a given string.
-# # If the string length is less than 2, return the empty string instead.
-# # RU: Напишите программу на Python, чтобы получить строку,
-# # состоящую из первых 2 и последних 2 символов заданной строки.
-# # Если длина строки меньше 2, вместо этого верните пустую строку.
-# def first_last_two(string):  # первые_2_последние_2
-#     return string[:2] + string[-2:]
-
-
-# # 10. Write a Python program to get a string from a given string where all occurrences of its first char
-# # have been changed to '$', except the first char itself.
-# # RU: Напишите программу на Python, чтобы получить строку из заданной строки,
-# # где все вхождения ее первого символа были заменены на '$',
-# # кроме самого первого символа.
-
-#? # INPUT:   =>  "This is test text"
-#? # OUTPUT:  =>  "This is $es$ $ex$"
-#? # изменить_первый_символ
-#? def change_first_char(str, symbol="$"):
-#?     first = str[0]
-#?     str = str.lower()
-#?     str = str.replace(first.lower(), symbol)
-#?     return first + str[1:]
-#? print(change_first_char("Hello hhhh hello"))
-
-
-
-# def swap_first_two(string1, string2):  # поменять_первые_два
-# # 12. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string
-# # already ends with 'ing', add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.
-# # RU: Напишите программу на Python, чтобы добавить 'ing' в конец заданной строки (длина должна быть не менее 3).
-# # Если заданная строка уже заканчивается на 'ing', вместо этого добавьте 'ly'.
-# # Если длина строки заданной строки меньше 3, оставьте ее без изменений.
-# def add_ing(string):  # добавить_ing
-# # 13. Write a Python program to find the first appearance of the substrings 'not' and 'poor' in a given string.
-# # If 'not' follows 'poor', replace the whole 'not'...'poor' substring with 'good'. Return the resulting string.
-# # RU: Напишите программу на Python, чтобы найти первое появление подстрок «не» и «плохо» в заданной строке.
-# # Если «не» следует за «плохо», замените всю подстроку «не» ... «плохо» на «хорошо». Вернуть полученную строку.
-# def replace_not_poor(string):  # заменить_не_плохо
-# # 14. Write a Python function to create an HTML string with tags around the word(s)
-# # RU: Напишите функцию Python для создания HTML-строки с тегами вокруг слова (слов).
-# def add_tags(tag, string):  # добавить_теги
-# # 15. Write a Python function to insert a string in the middle of a string.
-# # RU: Напишите функцию Python для вставки строки посередине строки.
-# # вставить_строку_посередине
-
-
-# def insert_string_middle(string, string_to_insert):
-# # 16. Write a Python function to get a string made of 4 copies of the last two characters of a specified string
-# # RU: Напишите функцию Python, чтобы получить строку, состоящую из 4 копий последних двух символов заданной строки
-# def last_two(string):  # последние_два
-# # 17. Write a Python function to get a string made of the first three characters of a specified string.
-# # If the length of the string is less than 3, return the original string.
-# # RU: Напишите функцию Python, чтобы получить строку, состоящую из первых трех символов заданной строки.
-# # Если длина строки меньше 3, вернуть исходную строку.
-# def first_three(string):  # первые_три
-# # 18. Write a Python function to get the first half of a specified string of even length.
-# # RU: Напишите функцию Python, чтобы получить первую половину заданной строки четной длины.
-# def first_half_even(string):  # первая_половина_четная
 
 # # 19. Write a Python program to concatenate two strings and return the result.
 # # If the length of the strings are not same then remove the characters from the longer string.
